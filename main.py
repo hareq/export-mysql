@@ -15,13 +15,13 @@ try:
     aa = cur.execute('show tables')
     info = cur.fetchmany(aa)
     row = 1
-    for n in range(1,aa):
+    for n in range(0,aa):
         Xlwt_use.table_structure(row,0,info[n],"a.xls")
         sql = 'show columns from '+ str(info[n])[2:len(str(info[n]))-3]
         bb = cur.execute(sql)
         infobb = cur.fetchmany(bb)
         row = row+1
-        for m in range(1,bb):
+        for m in range(0,bb):
             Xlwt_use.table_structure(row,1,infobb[m][0],"a.xls")
             Xlwt_use.table_structure(row,2,infobb[m][1],"a.xls")
             Xlwt_use.table_structure(row,3,infobb[m][2],"a.xls")
