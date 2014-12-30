@@ -2,6 +2,8 @@ __author__ = 'guyanhua'
 
 import MySQLdb
 import Xlwt_use
+import openpyxl
+
 
 try:
     conn= MySQLdb.connect(
